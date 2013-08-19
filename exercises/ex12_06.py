@@ -19,7 +19,7 @@ def reduce_words():
             for i in range(len(key)):
                 candidate = key[:i] + key[i+1:]
                 if candidate in d and candidate not in children:
-                    children += [candidate]
+                    children.append(candidate)
             d[key] = children
             
         return d
